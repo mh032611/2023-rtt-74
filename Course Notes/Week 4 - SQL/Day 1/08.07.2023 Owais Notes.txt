@@ -1,0 +1,126 @@
+Data : any collection of facts, statistics, information or records that are represented in a structured/unstructed format. It can be text, numbers, images, audio, video or more complex data types. We can generate useful insights, knowledge and decision making using data as the foundation in business and everyday life. It is raw facts that are to be processed to express their meaning (singular : datum). Data is collected about an entity.
+
+Data Attributes : Structure, Data Type, Shape
+Structure : Structured, Semi Structred, Unstructured
+Data Type : Quantitative/numerical, Qualitative/categorical
+- Quantitative : Continuous, Discrete
+- Qualitative : Ordinal, Nominal
+Shape : Wide, Long
+
+Database : organized collection of structured data to efficiently store, manage and retrieve information. An essential tool to manage vast amounts of data and provide reliable and structured way to access and manipulate that data.
+
+Database Management System (DBMS) : system software for creating and managing databases.
+Database : Data, Database Engine, Database Schema
+Database Engine : allows data to be accessed, locked and modified
+Database Schema : database's logical structure definition
+
+Relational Database Management Systems : DBMS based on a relational model (RDBMS). Data is represented in the form of a table. A 2 D arrary containing rows and columns and each row contains data related to an entity (student). Each column contains data related to a single attribute of entity (student name). It is easy to understand and manipulate the data in RDBMS. This is the basis of SQL. Examples : Oracle, MySQL, Microsoft Access, IBM DB2, MS SQL Server.
+
+Table : Table Name, Row (Tuple), Column (Attribute), Primary Key, Composite Key, Relation Schema. A table can have duplicate rows of data while a true relation cannot have duplicate data.
+
+Primary Key : a set of columns used to uniquely identify rows of table. It is not necessary but it is best practice.
+Composite Key : A primary key having two or more attributes (a combination of two or more columns)
+Relation Schema : describes the structure of the relation with the name of the relation (name of table) and its attributes names and types.
+
+Structured Query Language (SQL) : domain specific language used to program and manage data in RDBMS and it is useful for handling structured data. A set of statements with which software, applications and users can access data in database. It is useful for organizing, storing, updating, accessing and protecting information.
+
+SQL : DDL, DML, DCL, TCL, DQL
+- DDL : Create, Drop, Alter, Truncate (Data Definition Language)
+- DML : Insert, Update, Delete (Data Manipulation Language)
+- DCL : Grant, Revoke (Data Control Language)
+- TCL : Commit, Rollback, Save Point (Transaction Control Language)
+- DQL : Select (Data Query Language)
+
+Transaction : an indivisible unit of work
+
+Resources :
+- https://www.youtube.com/watch?v=AcqtAEzuoj0
+- https://beginnersbook.com/2015/04/acid-properties-in-dbms/
+- https://www.bmc.com/blogs/acid-atomic-consistent-isolated-durable/
+- https://www.learncomputerscienceonline.com/database-normalization/
+- https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning
+- https://www.lucidchart.com/pages/er-diagrams
+- https://www.mysqltutorial.org/mysql-sample-database.aspx
+- https://www.mysqltutorial.org/how-to-load-sample-database-into-mysql-database-server.aspx
+
+A : Atomic - all changes to data must be performed successfully or not at all
+C : Consistent - data must be in a consistent state before and after transaction
+I : Isolated - no other process can be change the data while the transaction is running
+D : Durable - changes made by transaction must remain
+
+Data Modeling : analysis and design method used to define and analyze data requirements, define logical and physical structures that support the requirements and document software and business system designs.
+
+Data Models : Heirarchical Data Model, Network Data Model, Relational Data Model, Object Oriented Database Model. Each has its own way to store data.
+
+Database Modeling : specific type of data modeling that concentrates on translating the logical data model (conceptual model) into a physical database design that can be implemented into a specific DBMS.
+
+Data Modeling Levels
+- Conceptual Data Model : Business Requirements, Business Rules ------>
+- Logical Data Model : Data types, Normalization ------>
+- Physical Data Model : Primary and Foreign Keys, Views, Indexes
+
+Normalization : structuring to prevent redundant information, data inconsistencies and duplicate data. Easier to understand, extend and enhance on.
+
+Levels of normalization : 1st Normal Form, 2nd Normal Form, 3rd Normal Form, etc.
+
+1NF
+- no row order allowed, only column ordering
+- different data types not allowed in same column, only one type of data type per column in a relational database
+- primary key is must, prevents multiple rows for same entity
+- repeating groups not allowed on single row
+
+2NF : non key attributes (non primary key values) must be dependent on entire primary key
+- Insertion anomaly, updation anomaly, deletion anomaly
+
+3NF : Transitive dependency. The dependency of a non key attribute on another non key attribute. Every attribute in a table should be dependent to the key only (Boyce Codd Normal Form)
+- data inconsistency
+
+4NF : only multivalued dependences in a table must be on the key
+
+5NF : If 4NF is met, table cannot be describable as logical result of joining some other tables together
+
+First Normal Form (1NF): This is the most basic level of normalization. In 1NF, each table cell should contain only a single value, and each column should have a unique name. The first normal form helps to eliminate duplicate data and simplify queries.
+Second Normal Form (2NF): 2NF eliminates redundant data by requiring that each non-key attribute be dependent on the primary key. This means that each column should be directly related to the primary key, and not to other columns.
+Third Normal Form (3NF): 3NF builds on 2NF by requiring that all non-key attributes are independent of each other. This means that each column should be directly related to the primary key, and not to any other columns in the same table.
+
+Relationships : associations between entities.
+- 1:1
+- 1:many
+- Many:many
+
+Overnight:  
+Review ER Diagrams and video: https://www.lucidchart.com/pages/er-diagrams
+
+Review slide deck 2 remaining slides
+
+Download the classicmodels database
+https://www.mysqltutorial.org/mysql-sample-database.aspx
+We will import it together!!!
+
+
+Preview Slide Deck 304.3 Data Definition Language and Data Integrity
+
+Preview Slide Deck Lesson 304.4 - SQL Clauses
+
+
+3 hour overview of all of SQL: https://www.youtube.com/watch?v=7S_tz1z_5bA&ab_channel=ProgrammingwithMosh
+
+BeginnerBook References from Slide deck 1.
+What is a database mgmt system: https://beginnersbook.com/2015/04/dbms-introduction/
+
+ACID properties of a reliable database: https://beginnersbook.com/2015/04/acid-properties-in-dbms/
+
+ER Diagrams: https://beginnersbook.com/2015/04/e-r-model-in-dbms/
+
+Primary Key: https://beginnersbook.com/2015/04/primary-key-in-dbms/
+
+
+Supplemental/(Tangent?) Material
+SQL vs NoSQL
+https://www.youtube.com/watch?v=Q5aTUc7c4jg&pp=ygUNc3FsIHZzIG5vIHNxbA%3D%3D
+
+
+Relational Database Modeling Diagram (Entity Relationship Diagram : ERD)
+
+
+
